@@ -1,10 +1,41 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
 }
-.grid-item {
-    background-color: #ccc;
-    padding: 20px;
-    text-align: center;
+
+h1 {
+    font-size: 61px;
+}
+
+h2 {
+    font-size: 49px;
+}
+
+h3 {
+    font-size: 39px;
+}
+
+h4 {
+    font-size: 31px;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.s {
+    font-size: 13px;
+}
+
+.s-small {
+    font-size: 10px;
 }
