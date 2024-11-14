@@ -63,3 +63,7 @@ p {
     display: flex;
     gap: 25px;
 }
+
+a {
+    text-decoration: none;
+  }
