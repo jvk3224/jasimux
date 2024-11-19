@@ -2,11 +2,13 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0; /* Remove default margin */
+    margin: 0;
+    /* Remove default margin */
 }
 
 h1 {
     font-size: 61px;
+    color: #333333;
 }
 
 h2 {
@@ -41,29 +43,95 @@ p {
     font-size: 10px;
 }
 
+@media (max-width: 768px) {
+
+    /* Adjust the max-width as needed for mobile screens */
+    h1 {
+        font-size: 49px;
+    }
+
+    h2 {
+        font-size: 39px;
+    }
+
+    h3 {
+        font-size: 31px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+    h5 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .s {
+        font-size: 10px;
+    }
+
+    .s-small {
+        font-size: 7px;
+    }
+
+}
 
 
 
 .sticky-header {
-    position: -webkit-sticky; /* For Safari */
+    position: -webkit-sticky;
+    /* For Safari */
     position: sticky;
     top: 0;
     background-color: #fff;
     box-shadow: 0px 2px 4px 0px rgba(51, 51, 51, 0.10);
     justify-content: space-between;
     align-items: center;
-    display: flex;    
+    display: flex;
     padding: 0% 4%;
-    width: 100%; /* Ensure full width */
-    box-sizing: border-box; /* Include padding in width */
+    width: 100%;
+    /* Ensure full width */
+    box-sizing: border-box;
+    /* Include padding in width */
 }
 
 
-.menu{
+.menu {
     display: flex;
     gap: 25px;
 }
 
 a {
     text-decoration: none;
-  }
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+button {
+    padding: 16px 32px;
+    color: #FF6f61;
+    background-color: #fff;
+    border: 2px solid var(--main-color, #FF6F61);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    color: #F0F0F0;
+    background-color: #FF6f61;
+}
