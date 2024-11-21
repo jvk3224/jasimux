@@ -135,3 +135,72 @@ button:hover {
     color: #F0F0F0;
     background-color: #FF6f61;
 }
+
+.responsive-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 100px;
+    margin-bottom: 100px;
+    transition: background-color 0.3s ease;
+}
+
+.responsive-container:hover {
+    background-color: #FF9B91;
+}
+
+.section {
+    flex: 1;
+    margin: 10px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-section h5 {
+    color: #333;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+    /* Smooth transition */
+}
+
+.text-section p {
+    color: #4A4A4A;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+    /* Smooth transition */
+}
+
+
+
+/* Change text color on hover */
+.responsive-container:hover .text-section h5 {
+    color: #F0F0F0;
+    /* New color for the header */
+}
+
+.responsive-container:hover .text-section p {
+    color: #F0F0F0;
+    /* New color for the paragraph */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .responsive-container {
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .section {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
