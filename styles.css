@@ -179,6 +179,13 @@ button:hover {
     /* Smooth transition */
 }
 
+.text-section span {
+    color: #FF6F61;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+    /* Smooth transition */
+}
+
 
 
 /* Change text color on hover */
@@ -192,15 +199,32 @@ button:hover {
     /* New color for the paragraph */
 }
 
+.responsive-container:hover .text-section span {
+    color: #F0F0F0;
+    /* New color for the paragraph */
+}
+
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .responsive-container {
         padding: 25px;
         margin-bottom: 25px;
+        flex-direction: column; /* Stack sections vertically */
     }
 
     .section {
         flex: 1 1 100%;
         text-align: center;
+    }
+
+    .image-section {
+        order: 1; /* Ensure image-section comes first */
+    }
+
+    .text-section {
+        order: 2; /* Ensure text-section comes second */
     }
 }
