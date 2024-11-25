@@ -229,3 +229,20 @@ button:hover {
         order: 2; /* Ensure text-section comes second */
     }
 }
+
+
+.img-about {
+    display: block;
+    margin: 50px auto 100px; 
+    padding: 0% 4%; /* Adds horizontal padding of 4% */
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    box-sizing: border-box; /* Ensures padding doesn't affect the image size */
+}
+
+@media (max-width: 768px) {
+    .center-image {
+        max-width: 250px;
+    }
+}
