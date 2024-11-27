@@ -6,6 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasim Ux | Ainvox</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .content {
+            color: #4a4a4a;
+        }
+
+        .content h3 {
+            margin: 0;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .content h3 {
+                text-align: center;
+                /* Center-align the h3 tag */
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +62,27 @@
 
     <div class="page-container">
 
-    
+        <div class="container">
+            <div class="content">
+                <h3><b><span style="color:#FF6F61;">AINVOX</span> - Cloud Telephony Platform</b></h3>
+                <p style="text-align: justify;">
+                    <b>Role:</b> UX/UI Designer<br>
+                    <b>Timeline:</b> November 2023 - November 2024<br><br>
+                    AINVOX, a product of Bistux Solutions Pvt Ltd, is a state-of-the-art cloud telephony platform based
+                    in
+                    Kozhikode, Kerala, India. Designed to revolutionize communication for businesses of all sizes,
+                    AINVOX offers
+                    intelligent, user-friendly, and scalable solutions to optimize communication strategies, enhance
+                    customer
+                    engagement, and streamline operations.
+                </p>
+            </div>
+            <div class="image">
+                <img src="images/ainvox/ainvox mokup.png" alt="AINVOX Mockup">
+            </div>
+        </div>
+
+
 
     </div>
 
