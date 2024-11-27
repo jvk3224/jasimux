@@ -106,6 +106,20 @@ p {
 }
 
 
+
+.page-container {
+    margin: 100px auto;
+    padding: 0% 4%;
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        margin: 50px auto; /* Force this rule to override others */
+    }
+}
+
+
+
 .menu {
     display: flex;
     gap: 25px;
@@ -214,7 +228,8 @@ button:hover {
     .responsive-container {
         padding: 25px;
         margin-bottom: 25px;
-        flex-direction: column; /* Stack sections vertically */
+        flex-direction: column;
+        /* Stack sections vertically */
     }
 
     .section {
@@ -223,27 +238,14 @@ button:hover {
     }
 
     .image-section {
-        order: 1; /* Ensure image-section comes first */
+        order: 1;
+        /* Ensure image-section comes first */
     }
 
     .text-section {
-        order: 2; /* Ensure text-section comes second */
+        order: 2;
+        /* Ensure text-section comes second */
     }
 }
 
 
-.img-about {
-    display: block;
-    margin: 50px auto 100px; 
-    padding: 0% 4%; /* Adds horizontal padding of 4% */
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    box-sizing: border-box; /* Ensures padding doesn't affect the image size */
-}
-
-@media (max-width: 768px) {
-    .center-image {
-        max-width: 250px;
-    }
-}
