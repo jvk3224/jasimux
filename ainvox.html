@@ -44,6 +44,51 @@
                 /* Center-align the h3 tag */
             }
         }
+
+        /* Box Container Styles */
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Box Styles */
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 30px;
+            background: var(--lite-color, #FF9B91);
+            box-shadow: 0px 0px 30px 0px rgba(255, 155, 145, 0.5);
+            width: calc(25% - 20px);
+            /* For 4 boxes in a row on desktop */
+            box-sizing: border-box;
+        }
+
+        .box h6 {
+            color: var(--text-color-1, #333);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .box p {
+            text-align: justify;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .box {
+                width: calc(50% - 20px);
+                /* For 2 boxes in a row on mobile */
+            }
+        }
     </style>
 </head>
 
@@ -82,6 +127,28 @@
             </div>
         </div>
 
+
+        <h4 style="color: var(--text-color-2, #4A4A4A); font-weight: 700;">My Contribution</h4>
+        <p>As the UX/UI Designer for AINVOX, I was responsible for:</p>
+
+        <div class="box-container">
+            <div class="box">
+                <h6>User Research</h6>
+                <p>Understanding user needs and pain points to create intuitive interfaces.</p>
+            </div>
+            <div class="box">
+                <h6>User Testing</h6>
+                <p>Conducting usability tests to ensure smooth and effective user experiences.</p>
+            </div>
+            <div class="box">
+                <h6>Prototyping</h6>
+                <p>Building interactive prototypes to validate design ideas and gather feedback.</p>
+            </div>
+            <div class="box">
+                <h6>UI Design</h6>
+                <p>Creating visually appealing designs that align with user expectations.</p>
+            </div>
+        </div>
 
 
     </div>
