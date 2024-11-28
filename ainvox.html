@@ -90,6 +90,59 @@
                 /* For 2 boxes in a row on mobile */
             }
         }
+
+
+        /* Container styles */
+.box-container-2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+/* Box styles */
+.box-2 {
+  display: inline-flex;
+  padding: 10px; /* Reduced padding */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background: var(--main-color, #FF6F61);
+  box-shadow: 0px 0px 30px 0px rgba(255, 111, 97, 0.75);
+  max-width: 300px; /* Optional: To control box width */
+  width: 100%;
+  text-align: center;
+}
+
+.box-2 img {
+  max-width: 80px; /* Reduced image size */
+  margin-bottom: 10px; /* Optional: Add space below the image */
+}
+
+.box-2 h6 {
+  color: var(--off-white, #F0F0F0);
+  font-weight: 500;
+  line-height: 1.2; /* Adjust line height */
+  margin: 5px 0; /* Reduced margin */
+}
+
+.box-2 p {
+  color: var(--off-white, #F0F0F0);
+  margin: 5px 0; /* Reduced margin */
+  line-height: 1.2; /* Adjust line height */
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .box-2 {
+    max-width: 100%; /* Full width for mobile */
+  }
+}
+
     </style>
 </head>
 
@@ -105,8 +158,8 @@
             </a>
         </div>
     </header>
-
     <div class="page-container">
+
 
         <div class="container">
             <div class="content">
@@ -127,9 +180,9 @@
                 <img src="images/ainvox/ainvox mokup.png" alt="AINVOX Mockup">
             </div>
         </div>
+<div class="div3"></div>
 
-
-        <h4 style="color: var(--text-color-2, #4A4A4A); font-weight: 700;">My Contribution</h4>
+        
         <p>As the UX/UI Designer for AINVOX, I was responsible for:</p>
 
         <div class="box-container">
@@ -151,9 +204,63 @@
             </div>
         </div>
 
+        <div class="div1"></div>
+
+<h4 style="color: #333; text-align: center; font-weight: 700;">Key Features Designed</h4>
+
+
+<div class="box-container-2">
+    <div class="box-2">
+      <img src="images/ainvox/campaign.png" alt="campaing">
+      <h6>Call Campaign Management</h6>
+      <p>User-friendly dashboards for scheduling and tracking calls.</p>
+    </div>
+    <div class="box-2">
+      <img src="images/ainvox/virtual phone number.png" alt="Virtual Phone Numbers">
+      <h6>Virtual Phone Numbers</h6>
+      <p>Interfaces for managing virtual numbers for businesses.</p>
+    </div>
+    <div class="box-2">
+      <img src="images/ainvox/IVR Builder.png" alt="IVR Builder">
+      <h6>IVR Builder</h6>
+      <p>Drag-and-drop tools for creating custom IVR workflows.</p>
+    </div>
+    <div class="box-2">
+      <img src="images/ainvox/Lead Management.png" alt="Lead Management">
+      <h6>Lead Management</h6>
+      <p>Simplified CRM integration for managing customer leads.</p>
+    </div>
+    <div class="box-2">
+      <img src="images/ainvox/Browser Calling with MPLS.png" alt="Browser Calling with MPLS">
+      <h6>Browser Calling with MPLS</h6>
+      <p>A seamless browser-based calling experience with high reliability.</p>
+    </div>
+    <div class="box-2">
+      <img src="images/ainvox/missed call.png" alt="Missed Calls">
+      <h6>Missed Calls & Notifications</h6>
+      <p>Real-time alerts for missed calls and follow-ups.</p>
+    </div>
+    <div class="box-2">
+      <img src="images/ainvox/Toll Free Number.png" alt="Toll-Free Numbers">
+      <h6>Toll-Free Numbers</h6>
+      <p>Features enabling easy setup and management.</p>
+    </div>
+    <div class="box-2">
+      <img src="images/ainvox/Call Masking.png" alt="Call Masking">
+      <h6>Call Masking</h6>
+      <p>Ensuring privacy during communications.</p>
+    </div>
+    <div class="box-2">
+      <img src="images/ainvox/integration.png" alt="Integrations">
+      <h6>Integrations</h6>
+      <p>Seamless compatibility with CRMs and helpdesk tools.</p>
+    </div>
+  </div>
+  
+
+
 
     </div>
-
     <footer>
         <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights
             reserved.</p>
