@@ -2,269 +2,394 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasim Ux | Ainvox</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .container {
-            display: flex;
-            flex-direction: row;
-            gap: 50px;
-            align-items: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasim Ux | Ainvox</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      align-items: center;
+    }
 
-        .content {
-            color: #4a4a4a;
-        }
+    .content {
+      color: #4a4a4a;
+    }
 
-        .content h3 {
-            margin: 0;
-        }
+    .content h3 {
+      margin: 0;
+    }
 
-        .image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .image img {
-            max-width: 100%;
-            height: auto;
-        }
+    .image img {
+      max-width: 100%;
+      height: auto;
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                gap: 25px;
-            }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 25px;
+      }
 
-            .content h3 {
-                text-align: center;
-                /* Center-align the h3 tag */
-            }
-        }
+      .content h3 {
+        text-align: center;
+        /* Center-align the h3 tag */
+      }
+    }
 
-        /* Box Container Styles */
-        .box-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 15px;
-        }
+    /* Box Container Styles */
+    .box-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 15px;
+    }
 
-        /* Box Styles */
-        .box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 15px;
-            padding: 15px;
-            border-radius: 30px;
-            background: var(--lite-color, #FF9B91);
-            box-shadow: 0px 0px 30px 0px rgba(255, 155, 145, 0.5);
-            width: calc(25% - 20px);
-            /* For 4 boxes in a row on desktop */
-            box-sizing: border-box;
-        }
+    /* Box Styles */
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 15px;
+      padding: 15px;
+      border-radius: 30px;
+      background: var(--lite-color, #FF9B91);
+      box-shadow: 0px 0px 30px 0px rgba(255, 155, 145, 0.5);
+      width: calc(25% - 20px);
+      /* For 4 boxes in a row on desktop */
+      box-sizing: border-box;
+    }
 
-        .box h6 {
-            color: var(--text-color-1, #333);
-            font-weight: 500;
-            margin: 0;
-        }
+    .box h6 {
+      color: var(--text-color-1, #333);
+      font-weight: 500;
+      margin: 0;
+    }
 
-        .box p {
-            text-align: justify;
-            margin: 0;
-            color: var(--text-color-2, #4A4A4A);
-        }
+    .box p {
+      text-align: justify;
+      margin: 0;
+      color: var(--text-color-2, #4A4A4A);
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .box {
-                width: calc(50% - 20px);
-                /* For 2 boxes in a row on mobile */
-            }
-        }
-
-
-        /* Container styles */
-.box-container-2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  padding: 20px;
-}
-
-/* Box styles */
-.box-2 {
-  display: inline-flex;
-  padding: 10px; /* Reduced padding */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  background: var(--main-color, #FF6F61);
-  box-shadow: 0px 0px 30px 0px rgba(255, 111, 97, 0.75);
-  max-width: 300px; /* Optional: To control box width */
-  width: 100%;
-  text-align: center;
-}
-
-.box-2 img {
-  max-width: 80px; /* Reduced image size */
-  margin-bottom: 10px; /* Optional: Add space below the image */
-}
-
-.box-2 h6 {
-  color: var(--off-white, #F0F0F0);
-  font-weight: 500;
-  line-height: 1.2; /* Adjust line height */
-  margin: 5px 0; /* Reduced margin */
-}
-
-.box-2 p {
-  color: var(--off-white, #F0F0F0);
-  margin: 5px 0; /* Reduced margin */
-  line-height: 1.2; /* Adjust line height */
-}
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .box {
+        width: calc(50% - 20px);
+        /* For 2 boxes in a row on mobile */
+      }
+    }
 
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  .box-2 {
-    max-width: 100%; /* Full width for mobile */
-  }
-}
+    /* Container styles */
+    .box-container-2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      padding: 20px;
+    }
 
-    </style>
+    /* Box styles */
+    .box-2 {
+      display: inline-flex;
+      padding: 10px;
+      /* Reduced padding */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      background: var(--main-color, #FF6F61);
+      box-shadow: 0px 0px 30px 0px rgba(255, 111, 97, 0.75);
+      max-width: 300px;
+      /* Optional: To control box width */
+      width: 100%;
+      text-align: center;
+    }
+
+    .box-2 img {
+      max-width: 80px;
+      /* Reduced image size */
+      margin-bottom: 10px;
+      /* Optional: Add space below the image */
+    }
+
+    .box-2 h6 {
+      color: var(--off-white, #F0F0F0);
+      font-weight: 500;
+      line-height: 1.2;
+      /* Adjust line height */
+      margin: 5px 0;
+      /* Reduced margin */
+    }
+
+    .box-2 p {
+      color: var(--off-white, #F0F0F0);
+      margin: 5px 0;
+      /* Reduced margin */
+      line-height: 1.2;
+      /* Adjust line height */
+    }
+
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .box-2 {
+        max-width: 100%;
+        /* Full width for mobile */
+      }
+    }
+
+    .box-container-3 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      /* Ensures all boxes stretch to the same height */
+      gap: 25px;
+    }
+
+    .box-3 {
+      display: flex;
+      flex-direction: column;
+      /* Ensures content aligns properly inside each box */
+      padding: 15px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      border: 1px solid var(--main-color, #FF6F61);
+      box-shadow: 0px 0px 50px 0px rgba(255, 110, 97, 0.10);
+      width: calc(33.33% - 20px);
+      box-sizing: border-box;
+    }
+
+
+    /* For smaller screens */
+    @media (max-width: 768px) {
+      .box-3 {
+        width: 100%;
+        /* Each box takes up full width on smaller screens */
+      }
+    }
+
+
+     /* Box Container Style */
+     .box-container-4 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      gap: 25px;
+    }
+
+    /* Box Style */
+    .box-4 {
+      flex: 1 1 calc(33.333% - 25px); /* 3 boxes per row on large screens */
+      max-width: calc(33.333% - 25px);
+      padding: 15px;
+      border-radius: 30px;
+      box-shadow: 0px 0px 10px 0px rgba(255, 111, 97, 0.50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Text Style inside Box */
+    .box-4 p {
+      color: var(--text-color-2, #4A4A4A);
+      text-align: center;
+    }
+
+    /* Responsive Design for Mobile View */
+    @media (max-width: 768px) {
+      .box-4 {
+        flex: 1 1 100%; /* 1 box per row on small screens */
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <header class="sticky-header">
-        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" /> </a>
-        <div class="menu">
-            <a href="index.html">
-                <p style="color: var(--text-color-1, #898989);">Projects</p>
-            </a>
-            <a href="about-me.html">
-                <p style="color: var(--text-coor-3,#898989);">About</p>
-            </a>
-        </div>
-    </header>
-    <div class="page-container">
+  <header class="sticky-header">
+    <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" /> </a>
+    <div class="menu">
+      <a href="index.html">
+        <p style="color: var(--text-color-1, #898989);">Projects</p>
+      </a>
+      <a href="about-me.html">
+        <p style="color: var(--text-coor-3,#898989);">About</p>
+      </a>
+    </div>
+  </header>
+  <div class="page-container">
 
 
-        <div class="container">
-            <div class="content">
-                <h3><b><span style="color:#FF6F61;">AINVOX</span> - Cloud Telephony Platform</b></h3>
-                <p style="text-align: justify;">
-                    <b>Role:</b> UX/UI Designer<br>
-                    <b>Timeline:</b> November 2023 - November 2024<br><br>
-                    AINVOX, a product of Bistux Solutions Pvt Ltd, is a state-of-the-art cloud telephony platform based
-                    in
-                    Kozhikode, Kerala, India. Designed to revolutionize communication for businesses of all sizes,
-                    AINVOX offers
-                    intelligent, user-friendly, and scalable solutions to optimize communication strategies, enhance
-                    customer
-                    engagement, and streamline operations.
-                </p>
-            </div>
-            <div class="image">
-                <img src="images/ainvox/ainvox mokup.png" alt="AINVOX Mockup">
-            </div>
-        </div>
-<div class="div3"></div>
-
-        
-        <p>As the UX/UI Designer for AINVOX, I was responsible for:</p>
-
-        <div class="box-container">
-            <div class="box">
-                <h6>User Research</h6>
-                <p>Understanding user needs and pain points to create intuitive interfaces.</p>
-            </div>
-            <div class="box">
-                <h6>User Testing</h6>
-                <p>Conducting usability tests to ensure smooth and effective user experiences.</p>
-            </div>
-            <div class="box">
-                <h6>Prototyping</h6>
-                <p>Building interactive prototypes to validate design ideas and gather feedback.</p>
-            </div>
-            <div class="box">
-                <h6>UI Design</h6>
-                <p>Creating visually appealing designs that align with user expectations.</p>
-            </div>
-        </div>
-
-        <div class="div1"></div>
-
-<h4 style="color: #333; text-align: center; font-weight: 700;">Key Features Designed</h4>
+    <div class="container">
+      <div class="content">
+        <h3><b><span style="color:#FF6F61;">AINVOX</span> - Cloud Telephony Platform</b></h3>
+        <p style="text-align: justify;">
+          <b>Role:</b> UX/UI Designer<br>
+          <b>Timeline:</b> November 2023 - November 2024<br><br>
+          AINVOX, a product of Bistux Solutions Pvt Ltd, is a state-of-the-art cloud telephony platform based
+          in
+          Kozhikode, Kerala, India. Designed to revolutionize communication for businesses of all sizes,
+          AINVOX offers
+          intelligent, user-friendly, and scalable solutions to optimize communication strategies, enhance
+          customer
+          engagement, and streamline operations.
+        </p>
+      </div>
+      <div class="image">
+        <img src="images/ainvox/ainvox mokup.png" alt="AINVOX Mockup">
+      </div>
+    </div>
+    <div class="div3"></div>
 
 
-<div class="box-container-2">
-    <div class="box-2">
-      <img src="images/ainvox/campaign.png" alt="campaing">
-      <h6>Call Campaign Management</h6>
-      <p>User-friendly dashboards for scheduling and tracking calls.</p>
+    <p>As the UX/UI Designer for AINVOX, I was responsible for:</p>
+
+    <div class="box-container">
+      <div class="box">
+        <h6>User Research</h6>
+        <p>Understanding user needs and pain points to create intuitive interfaces.</p>
+      </div>
+      <div class="box">
+        <h6>User Testing</h6>
+        <p>Conducting usability tests to ensure smooth and effective user experiences.</p>
+      </div>
+      <div class="box">
+        <h6>Prototyping</h6>
+        <p>Building interactive prototypes to validate design ideas and gather feedback.</p>
+      </div>
+      <div class="box">
+        <h6>UI Design</h6>
+        <p>Creating visually appealing designs that align with user expectations.</p>
+      </div>
     </div>
-    <div class="box-2">
-      <img src="images/ainvox/virtual phone number.png" alt="Virtual Phone Numbers">
-      <h6>Virtual Phone Numbers</h6>
-      <p>Interfaces for managing virtual numbers for businesses.</p>
+
+    <div class="div1"></div>
+
+    <h4 style="color: #333; text-align: center; font-weight: 700;">Key Features Designed</h4>
+
+
+    <div class="box-container-2">
+      <div class="box-2">
+        <img src="images/ainvox/campaign.png" alt="campaing">
+        <h6>Call Campaign Management</h6>
+        <p>User-friendly dashboards for scheduling and tracking calls.</p>
+      </div>
+      <div class="box-2">
+        <img src="images/ainvox/virtual phone number.png" alt="Virtual Phone Numbers">
+        <h6>Virtual Phone Numbers</h6>
+        <p>Interfaces for managing virtual numbers for businesses.</p>
+      </div>
+      <div class="box-2">
+        <img src="images/ainvox/IVR Builder.png" alt="IVR Builder">
+        <h6>IVR Builder</h6>
+        <p>Drag-and-drop tools for creating custom IVR workflows.</p>
+      </div>
+      <div class="box-2">
+        <img src="images/ainvox/Lead Management.png" alt="Lead Management">
+        <h6>Lead Management</h6>
+        <p>Simplified CRM integration for managing customer leads.</p>
+      </div>
+      <div class="box-2">
+        <img src="images/ainvox/Browser Calling with MPLS.png" alt="Browser Calling with MPLS">
+        <h6>Browser Calling with MPLS</h6>
+        <p>A seamless browser-based calling experience with high reliability.</p>
+      </div>
+      <div class="box-2">
+        <img src="images/ainvox/missed call.png" alt="Missed Calls">
+        <h6>Missed Calls & Notifications</h6>
+        <p>Real-time alerts for missed calls and follow-ups.</p>
+      </div>
+      <div class="box-2">
+        <img src="images/ainvox/Toll Free Number.png" alt="Toll-Free Numbers">
+        <h6>Toll-Free Numbers</h6>
+        <p>Features enabling easy setup and management.</p>
+      </div>
+      <div class="box-2">
+        <img src="images/ainvox/Call Masking.png" alt="Call Masking">
+        <h6>Call Masking</h6>
+        <p>Ensuring privacy during communications.</p>
+      </div>
+      <div class="box-2">
+        <img src="images/ainvox/integration.png" alt="Integrations">
+        <h6>Integrations</h6>
+        <p>Seamless compatibility with CRMs and helpdesk tools.</p>
+      </div>
     </div>
-    <div class="box-2">
-      <img src="images/ainvox/IVR Builder.png" alt="IVR Builder">
-      <h6>IVR Builder</h6>
-      <p>Drag-and-drop tools for creating custom IVR workflows.</p>
+
+
+    <div class="div1"></div>
+
+    <h4 style="color: #333; text-align: center; font-weight: 700;">Challenges & Solutions</h4>
+
+    <div class="box-container-3">
+      <div class="box-3">
+        <ul style="color: var(--text-color-2, #4A4A4A);">
+          <li><b>Challenge:</b> Designing for scalability to support businesses of varying sizes.</li>
+          <li><b>Solution:</b> Created adaptive designs that cater to small startups and large enterprises alike.</li>
+        </ul>
+      </div>
+      <div class="box-3">
+        <ul style="color: var(--text-color-2, #4A4A4A);">
+          <li><b>Challenge:</b> Simplifying complex telephony processes for non-technical users.</li>
+          <li><b>Solution:</b> Designed intuitive workflows with user-friendly elements like tooltips and guided tours.
+          </li>
+        </ul>
+      </div>
+      <div class="box-3">
+        <ul style="color: var(--text-color-2, #4A4A4A);">
+          <li><b>Challenge:</b> Maintaining system performance while implementing feature-rich UI.</li>
+          <li><b>Solution:</b> Collaborated with developers to optimize designs for faster loading times and
+            responsiveness.</li>
+        </ul>
+      </div>
     </div>
-    <div class="box-2">
-      <img src="images/ainvox/Lead Management.png" alt="Lead Management">
-      <h6>Lead Management</h6>
-      <p>Simplified CRM integration for managing customer leads.</p>
+
+
+    <div class="div1"></div>
+
+    <h4 style="color: #333; text-align: center; font-weight: 700;">Outcomes</h4>
+
+    <div class="box-container-4">
+      <div class="box-4">
+        <p>30% faster task completion, boosting user engagement.</p>
+      </div>
+      <div class="box-4">
+        <p>Positive user feedback highlighting the platform's ease of use and clean design.</p>
+      </div>
+      <div class="box-4">
+        <p>Successfully implemented a design system that streamlined future iterations.</p>
+      </div>
     </div>
-    <div class="box-2">
-      <img src="images/ainvox/Browser Calling with MPLS.png" alt="Browser Calling with MPLS">
-      <h6>Browser Calling with MPLS</h6>
-      <p>A seamless browser-based calling experience with high reliability.</p>
-    </div>
-    <div class="box-2">
-      <img src="images/ainvox/missed call.png" alt="Missed Calls">
-      <h6>Missed Calls & Notifications</h6>
-      <p>Real-time alerts for missed calls and follow-ups.</p>
-    </div>
-    <div class="box-2">
-      <img src="images/ainvox/Toll Free Number.png" alt="Toll-Free Numbers">
-      <h6>Toll-Free Numbers</h6>
-      <p>Features enabling easy setup and management.</p>
-    </div>
-    <div class="box-2">
-      <img src="images/ainvox/Call Masking.png" alt="Call Masking">
-      <h6>Call Masking</h6>
-      <p>Ensuring privacy during communications.</p>
-    </div>
-    <div class="box-2">
-      <img src="images/ainvox/integration.png" alt="Integrations">
-      <h6>Integrations</h6>
-      <p>Seamless compatibility with CRMs and helpdesk tools.</p>
-    </div>
+
+    <div class="div1"></div>
+
+    <h4 style="color: #333; text-align: center; font-weight: 700;">Gallery</h4>
+
+
+
+
   </div>
-  
-
-
-
-    </div>
-    <footer>
-        <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights
-            reserved.</p>
-    </footer>
+  <footer>
+    <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights
+      reserved.</p>
+  </footer>
 </body>
 
 </html>
