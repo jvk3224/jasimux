@@ -185,8 +185,8 @@
     }
 
 
-     /* Box Container Style */
-     .box-container-4 {
+    /* Box Container Style */
+    .box-container-4 {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -196,7 +196,8 @@
 
     /* Box Style */
     .box-4 {
-      flex: 1 1 calc(33.333% - 25px); /* 3 boxes per row on large screens */
+      flex: 1 1 calc(33.333% - 25px);
+      /* 3 boxes per row on large screens */
       max-width: calc(33.333% - 25px);
       padding: 15px;
       border-radius: 30px;
@@ -215,8 +216,57 @@
     /* Responsive Design for Mobile View */
     @media (max-width: 768px) {
       .box-4 {
-        flex: 1 1 100%; /* 1 box per row on small screens */
+        flex: 1 1 100%;
+        /* 1 box per row on small screens */
         max-width: 100%;
+      }
+    }
+
+
+    .gallery-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 50px;
+      padding-bottom: 50px;
+    }
+
+    .image-container,
+    .text-container {
+      width: 50%;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Responsive Design for Mobile */
+    @media screen and (max-width: 768px) {
+      .gallery-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        gap: 0px;
+        /* Adjust spacing */
+        padding-bottom: 50px;
+      }
+
+      .image-container,
+      .text-container {
+        width: 100%;
+        /* Take full width */
+      }
+
+      .image-container {
+        order: -1;
+        /* Move the image to the top */
+      }
+
+      .text-container {
+        order: 1;
+        /* Ensure text stays below */
+        text-align: center;
       }
     }
   </style>
@@ -234,6 +284,8 @@
       </a>
     </div>
   </header>
+
+
   <div class="page-container">
 
 
@@ -382,6 +434,87 @@
 
     <h4 style="color: #333; text-align: center; font-weight: 700;">Gallery</h4>
 
+
+
+    <div class="gallery-container">
+      <div class="image-container">
+        <img src="images/ainvox/dashboard.png" alt="Dashboard Design">
+      </div>
+      <div class="text-container">
+        <h5 style="color: var(--text-color-1, #333);
+        font-style: normal;
+        font-weight: 500;
+        ">Dashboard Design</h5>
+        <p style="color: var(--text-color-2, #4A4A4A);
+                  text-align: justify;
+                  font-style: normal;
+                  font-weight: 400;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+          eget
+          dolor. Aenean
+          massa. Cum
+          sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+          nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+      </div>
+    </div>
+
+    <div class="gallery-container">
+      <div class="text-container">
+        <h5 style="color: var(--text-color-1, #333);
+        font-style: normal;
+        font-weight: 500;
+        ">Call Campaign Management Page</h5>
+        <p style="color: var(--text-color-2, #4A4A4A);
+                  text-align: justify;
+                  font-style: normal;
+                  font-weight: 400;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+          eget
+          dolor. Aenean
+          massa. Cum
+          sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+          nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+      </div>
+      <div class="image-container">
+        <img src="images/ainvox/campain mokup.png" alt="Call Campaign Management">
+      </div>
+    </div>
+
+    <div class="gallery-container">
+      <div class="image-container">
+        <img src="images/ainvox/Call log mokup.png" alt="Call Log">
+      </div>
+      <div class="text-container">
+        <h5 style="color: var(--text-color-1, #333);
+        font-style: normal;
+        font-weight: 500;
+        ">Call Log</h5>
+        <p style="color: var(--text-color-2, #4A4A4A);
+                  text-align: justify;
+                  font-style: normal;
+                  font-weight: 400;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+          eget
+          dolor. Aenean
+          massa. Cum
+          sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+          nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
+          aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+      </div>
+    </div>
+
+
+
+
+    <div class="div1"></div>
+
+    <h4 style="color: #333; text-align: center; font-weight: 700;">Visit AINVOX</h4>
+    <div style="text-align: center;">
+      <p style="color: var(--text-color-2, #4A4A4A);
+      text-align: center;
+      font-weight: 400;">Landing Website Link : <a href="https://ainvox.com/" target="_blank"
+          style="color: var(--main-color, #FF6F61); 
+          font-weight: 700;">ainvox.com</a></p>
+    </div>
 
 
 
