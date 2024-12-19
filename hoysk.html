@@ -7,20 +7,220 @@
     <title>Jasim Ux | Hoysk</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .maintenance-banner {
-            background-color: #FF6F61;
-            color: #fff;
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .content {
+            color: #4a4a4a;
+        }
+
+        .content h3 {
+            margin: 0;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .content h3 {
+                text-align: center;
+                /* Center-align the h3 tag */
+            }
+        }
+
+        /* Box Container Styles */
+        .box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Box Styles */
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            border-radius: 30px;
+            background: var(--lite-color, #FF9B91);
+            box-shadow: 0px 0px 30px 0px rgba(255, 155, 145, 0.5);
+            width: calc(25% - 20px);
+            /* For 4 boxes in a row on desktop */
+            box-sizing: border-box;
+        }
+
+
+
+        .box p {
+            text-align: justify;
+            margin: 0;
+            color: var(--text-color-2, #4A4A4A);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .box {
+                width: calc(50% - 20px);
+                /* For 2 boxes in a row on mobile */
+            }
+        }
+
+
+        /* Container styles */
+        .box-container-2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            padding: 20px;
+        }
+
+        /* Box styles */
+        .box-2 {
+            display: inline-flex;
+            padding: 10px;
+            /* Reduced padding */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            background: var(--main-color, #FF6F61);
+            box-shadow: 0px 0px 30px 0px rgba(255, 111, 97, 0.75);
+            max-width: 300px;
+            /* Optional: To control box width */
+            width: 100%;
             text-align: center;
-            padding: 10%;
-            font-size: 20px;
-            font-weight: bold;
+        }
+
+        .box-2 h6 {
+            color: var(--off-white, #F0F0F0);
+            font-weight: 500;
+            line-height: 1.2;
+            /* Adjust line height */
+            margin: 5px 0;
+            /* Reduced margin */
+        }
+
+        .box-2 p {
+            color: var(--off-white, #F0F0F0);
+            margin: 5px 0;
+            /* Reduced margin */
+            line-height: 1.2;
+            /* Adjust line height */
+        }
+
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .box-2 {
+                max-width: 100%;
+                /* Full width for mobile */
+            }
+        }
+
+        .box-container-3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            /* Ensures all boxes stretch to the same height */
+            gap: 25px;
+        }
+
+        .box-3 {
+            display: flex;
+            flex-direction: column;
+            /* Ensures content aligns properly inside each box */
+            padding: 15px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            border: 1px solid var(--main-color, #FF6F61);
+            box-shadow: 0px 0px 50px 0px rgba(255, 110, 97, 0.10);
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+        }
+
+        .box-3 p {
+            color: var(--text-color-2, #4A4A4A);
+            text-align: center;
+        }
+
+
+        /* For smaller screens */
+        @media (max-width: 768px) {
+            .box-3 {
+                width: 100%;
+                /* Each box takes up full width on smaller screens */
+            }
+        }
+
+
+        /* Box Container Style */
+        .box-container-4 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 25px;
+        }
+
+        /* Box Style */
+        .box-4 {
+            flex: 1 1 calc(33.333% - 25px);
+            /* 3 boxes per row on large screens */
+            max-width: calc(33.333% - 25px);
+            padding: 15px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 10px 0px rgba(255, 111, 97, 0.50);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Text Style inside Box */
+        .box-4 p {
+            color: var(--text-color-2, #4A4A4A);
+            text-align: center;
+        }
+
+        /* Responsive Design for Mobile View */
+        @media (max-width: 768px) {
+            .box-4 {
+                flex: 1 1 100%;
+                /* 1 box per row on small screens */
+                max-width: 100%;
+            }
         }
     </style>
 </head>
 
 <body>
     <header class="sticky-header">
-        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" alt="Logo" /> </a>
+        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" /> </a>
         <div class="menu">
             <a href="index.html">
                 <p style="color: var(--text-color-1, #898989);">Projects</p>
@@ -31,14 +231,117 @@
         </div>
     </header>
 
-    <div class="maintenance-banner">
-        🛠️ This page is currently under maintenance. Please check back later! 🛠️
+
+    <div class="page-container">
+
+
+        <div class="container">
+            <div class="content">
+                <h3><b><span style="color:#FF6F61;">Hoysk</span> - Coding Learning Platform</b></h3>
+                <p style="text-align: justify;">
+                    <b>Role:</b> UX/UI Designer & WordPress Developer<br>
+                    <b>Company:</b> Bistux Solutions Pvt Ltd, Kozhikode, Kerala, India<br>
+                    <b>Timeline:</b> May 2024 – September 2024<br><br>
+                    Hoysk is a dynamic e-learning platform designed to make coding accessible and engaging. As part of
+                    the Bistux Solutions team, I contributed to crafting a user-friendly interface and managing the
+                    platform's WordPress development.
+                </p>
+            </div>
+            <div class="image">
+                <img src="images/hoysk/Hoysk Mockup.png" alt="Hoysk Mockup">
+            </div>
+        </div>
+        <div class="div3"></div>
+
+        <h4 style="color: #333;  font-weight: 700; line-height: 0%;">My Contribution</h4>
+
+        <div class="box-container">
+            <div class="box">
+                <p>Designed intuitive user interfaces to enhance the learning experience.</p>
+            </div>
+            <div class="box">
+                <p>Conducted user research to understand the needs of novice coders.</p>
+            </div>
+            <div class="box">
+                <p>Developed responsive and SEO-friendly WordPress pages.</p>
+            </div>
+            <div class="box">
+                <p>Created engaging visuals and interactive elements for course pages.</p>
+            </div>
+        </div>
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Key Features</h4>
+
+
+        <div class="box-container-2">
+            <div class="box-2">
+                <h6>5-Day Coding Challenge</h6>
+                <p>A beginner-friendly course covering the fundamentals of HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="box-2">
+                <h6>Full-Stack Software Development Program</h6>
+                <p>A comprehensive curriculum for aspiring full-stack developers.</p>
+            </div>
+        </div>
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Design Highlights</h4>
+
+        <div class="box-container-3">
+            <div class="box-3">
+                <p>Clean and modern design that ensures effortless navigation.</p>
+            </div>
+            <div class="box-3">
+                <p>Strategically placed call-to-action buttons to drive user engagement.</p>
+            </div>
+            <div class="box-3">
+                <p>Optimized for mobile and desktop experiences.</p>
+            </div>
+        </div>
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Results</h4>
+
+        <div class="box-container-4">
+            <div class="box-4">
+                <p>Improved user retention by 20% through enhanced usability.</p>
+            </div>
+            <div class="box-4">
+                <p>Positive feedback from users for an aesthetically pleasing and functional interface.</p>
+            </div>
+        </div>
+
+        <div class="div1"></div>
+        <div style="text-align: center;">
+        <img src="images/hoysk/home page design.png" style="width: 60%; border-radius: 25px;
+        background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+        box-shadow: 0px 0px 5px 0px rgba(68, 82, 97, 0.25);">
+        </div>
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Visit Hoysk</h4>
+        <div style="text-align: center;">
+            <p style="color: var(--text-color-2, #4A4A4A);
+      text-align: center;
+      font-weight: 400;">Website Link : <a href="https://hoysk.com/" target="_blank" style="color: var(--main-color, #FF6F61); 
+          font-weight: 700;">hoysk.com</a></p>
+        </div>
+
+
+
     </div>
-
-   
-
     <footer>
-        <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights reserved.</p>
+        <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights
+            reserved.</p>
     </footer>
 </body>
 
