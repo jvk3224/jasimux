@@ -38,13 +38,6 @@ p {
     color: #4A4A4A;
 }
 
-.s {
-    font-size: 13px;
-}
-
-.s-small {
-    font-size: 10px;
-}
 
 @media (max-width: 768px) {
 
@@ -76,15 +69,6 @@ p {
     p {
         font-size: 13px;
     }
-
-    .s {
-        font-size: 10px;
-    }
-
-    .s-small {
-        font-size: 7px;
-    }
-
 }
 
 
@@ -187,6 +171,7 @@ button:hover {
     color: #333;
     margin-bottom: 5px;
     transition: color 0.3s ease;
+    font-weight: 500;
     /* Smooth transition */
 }
 
