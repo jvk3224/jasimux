@@ -7,24 +7,69 @@
     <title>Jasim Ux | About</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        
         .img-about {
-    display: block;
-    margin: 50px auto;
-    padding: 0% 4%;
-    /* Adds horizontal padding of 4% */
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    box-sizing: border-box;
-    /* Ensures padding doesn't affect the image size */
-}
+            display: block;
+            margin: 50px auto;
+            padding: 0% 4%;
+            /* Adds horizontal padding of 4% */
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            box-sizing: border-box;
+            /* Ensures padding doesn't affect the image size */
+        }
 
-@media (max-width: 768px) {
-    .center-image {
-        max-width: 250px;
-    }
-}
+        @media (max-width: 768px) {
+            .center-image {
+                max-width: 250px;
+            }
+        }
+
+
+        /* Box Container Styles */
+        .box-container-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+        }
+
+        /* Box Styles */
+        /* Box Styles */
+        .box-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* Changed from flex-start to center */
+            gap: 15px;
+            padding: 15px;
+            border-radius: 30px;
+            background: var(--lite-color, #FF9B91);
+            box-shadow: 0px 0px 30px 0px rgba(255, 155, 145, 0.5);
+            width: calc(25% - 20px);
+            /* For 4 boxes in a row on desktop */
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+
+
+        .box-2 p {
+            text-align: center;
+            margin: 0;
+            color: var(--text-color-2, #4A4A4A);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .box-2 {
+                width: calc(50% - 20px);
+                /* For 2 boxes in a row on mobile */
+            }
+        }
     </style>
 </head>
 
@@ -43,8 +88,7 @@
 
     <div class="page-container">
 
-        <h3 style="text-align: center; margin-bottom: 50px;">About <span
-                style="color: #FF6F61;">Me</span></h3>
+        <h3 style="text-align: center; margin-bottom: 50px;">About <span style="color: #FF6F61;">Me</span></h3>
 
         <p style="color: var(--text-color-2, #4A4A4A); text-align: justify;  margin-bottom: 50px;">Hi! I'm Mohammed
             Jasim Vk, a passionate UX/UI designer with over 2.5 years of experience
@@ -60,9 +104,72 @@
 
         <img src="images/img-about.png" alt="About Image" class="img-about">
 
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700; line-height: normal;">My Expertise</h4>
+
+        <h5 style="color: #333; text-align: center; font-weight: 600; line-height: 0%;">Skills</h5>
+        <div class="box-container-2">
+            <div class="box-2">
+                <p>Prototyping & Wireframing</p>
+            </div>
+            <div class="box-2">
+                <p>User Research & Usability Testing</p>
+            </div>
+            <div class="box-2">
+                <p>Design Thinking & Mockups</p>
+            </div>
+            <div class="box-2">
+                <p>Graphic Design & Video Editing</p>
+            </div>
+            <div class="box-2">
+                <p>HTML, CSS, & Bootstrap</p>
+            </div>
+            <div class="box-2">
+                <p>WordPress & Elementor</p>
+            </div>
+        </div>
+
+        <h5 style="color: #333; text-align: center; font-weight: 600; line-height: 0%;">Tools</h5>
+        <div class="box-container-2">
+            <div class="box-2">
+                <p>Figma</p>
+            </div>
+            <div class="box-2">
+                <p>Adobe XD</p>
+            </div>
+            <div class="box-2">
+                <p>Sketch</p>
+            </div>
+            <div class="box-2">
+                <p>InVision</p>
+            </div>
+            <div class="box-2">
+                <p>Photoshop</p>
+            </div>
+            <div class="box-2">
+                <p>Illustrator</p>
+            </div>
+            <div class="box-2">
+                <p>Canva</p>
+            </div>
+            <div class="box-2">
+                <p>Premiere</p>
+            </div>
+            <div class="box-2">
+                <p>WordPress</p>
+            </div>
+            <div class="box-2">
+                <p>VS Code</p>
+            </div>
+        </div>
+
+
+
+
+
+
     </div>
-
-
     <footer>
         <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights
             reserved.</p>
