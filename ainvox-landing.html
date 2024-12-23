@@ -4,23 +4,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasim Ux | Ainvox Lainding Website</title>
+    <title>Jasim Ux | Ainvox App</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .maintenance-banner {
-            background-color: #FF6F61;
-            color: #fff;
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .content {
+            color: #4a4a4a;
+        }
+
+        .content h3 {
+            margin: 0;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .content h3 {
+                text-align: center;
+                /* Center-align the h3 tag */
+            }
+        }
+
+
+        /* Container styles */
+        .box-container-2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 25px;
+            padding: 20px;
+        }
+
+        /* Box styles */
+        .box-2 {
+            display: inline-flex;
+            padding: 10px;
+            /* Reduced padding */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            background: var(--main-color, #FF6F61);
+            box-shadow: 0px 0px 30px 0px rgba(255, 111, 97, 0.75);
+            max-width: 300px;
+            /* Optional: To control box width */
+            width: 100%;
             text-align: center;
-            padding: 10%;
-            font-size: 20px;
-            font-weight: bold;
+        }
+
+
+        .box-2 p {
+            color: var(--off-white, #F0F0F0);
+            margin: 5px 0;
+            /* Reduced margin */
+            line-height: 1.2;
+            /* Adjust line height */
+        }
+
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .box-2 {
+                max-width: 100%;
+                /* Full width for mobile */
+            }
+        }
+
+        .box-container-4 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin: 0 auto;
+            /* Center container if needed */
+        }
+
+        .box-container-4 img {
+            width: 595px;
+            height: auto;
+            border-radius: 25px;
+            background: url(<path-to-image>) lightgray -0.273px 0px / 100.092% 101.968% no-repeat;
+            box-shadow: 0px 0px 4px 0px rgba(64, 54, 116, 0.25);
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .box-container-4 img {
+                width: 100%;
+                /* Adjust width for mobile */
+                max-width: 428px;
+                /* Prevent the image from exceeding its original size */
+            }
+
+            .box-container-4 {
+                flex-direction: column;
+                /* Stack images vertically */
+            }
         }
     </style>
 </head>
 
 <body>
     <header class="sticky-header">
-        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" alt="Logo" /> </a>
+        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" /> </a>
         <div class="menu">
             <a href="index.html">
                 <p style="color: var(--text-color-1, #898989);">Projects</p>
@@ -31,12 +139,96 @@
         </div>
     </header>
 
-    <div class="maintenance-banner">
-        🛠️ This page is currently under maintenance. Please check back later! 🛠️
+
+    <div class="page-container">
+
+
+        <div class="container">
+            <div class="content">
+                <h3><b><span style="color:#FF6F61;">Ainvox</span> Landing Website</b></h3>
+                <p style="text-align: justify;">
+                    <b>Role:</b> UX/UI Designer & WordPress Developer<br>
+                    <b>Timeline:</b> May 2024 – November 2024<br><br>
+                    Ainvox is a robust cloud telephony platform designed to streamline business communication. Its
+                    intuitive interface and versatile features cater to diverse industries, enabling efficient call
+                    management, seamless API integrations, and real-time analytics.
+                </p>
+            </div>
+            <div class="image">
+                <img src="images/Ainvox landing/Ainvox - Landing Website mokup.png" alt="AINVOX Mockup">
+            </div>
+        </div>
+        <div class="div3"></div>
+
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Key Features</h4>
+
+
+        <div class="box-container-2">
+            <div class="box-2">
+                <h6>Features</h6>
+                <p>Intuitive call handling, automated workflows, and analytics.</p>
+            </div>
+            <div class="box-2">
+                <h6>Industries</h6>
+                <p>Solutions tailored for e-commerce, customer support, and sales-driven businesses.</p>
+            </div>
+            <div class="box-2">
+                <h6>Solutions</h6>
+                <p>Enhanced customer interactions, operational efficiency, and scalable communication.</p>
+            </div>
+            <div class="box-2">
+                <h6>Pricing</h6>
+                <p>Transparent plans for businesses of all sizes.</p>
+            </div>
+            <div class="box-2">
+                <h6>API</h6>
+                <p>Easy integration with existing CRM and ERP systems.</p>
+            </div>
+            <div class="box-2">
+                <h6>Contact</h6>
+                <p>Dedicated support for queries and assistance.</p>
+            </div>
+            <div class="box-2">
+                <h6>Demo Booking</h6>
+                <p>A step-by-step guide for exploring Ainvox’s features.</p>
+            </div>
+            <div class="box-2">
+                <h6>Chat Option</h6>
+                <p>Real-time customer support.</p>
+            </div>
+        </div>
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Designs</h4>
+
+        <div class="box-container-4">
+            <img src="images/Ainvox landing/home.png" alt="home">
+            <img src="images/Ainvox landing/Demo booking page.png" alt="Demo booking page">
+        </div>
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Visit AINVOX</h4>
+        <div style="text-align: center;">
+            <p style="color: var(--text-color-2, #4A4A4A);
+          text-align: center;
+          font-weight: 400;">Landing Website Link : <a href="https://ainvox.com/" target="_blank" style="color: var(--main-color, #FF6F61); 
+              font-weight: 700;">ainvox.com</a></p>
+        </div>
+
+
+
+
     </div>
-
-
-
     <footer>
         <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights
             reserved.</p>
