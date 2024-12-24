@@ -7,20 +7,136 @@
     <title>Jasim Ux | Visual Arts for Hoysk</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .maintenance-banner {
-            background-color: #FF6F61;
-            color: #fff;
-            text-align: center;
-            padding: 10%;
-            font-size: 20px;
-            font-weight: bold;
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            align-items: center;
         }
+
+        .content {
+            color: #4a4a4a;
+        }
+
+        .content h3 {
+            margin: 0;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .content h3 {
+                text-align: center;
+                /* Center-align the h3 tag */
+            }
+        }
+
+
+
+        .box-container-4 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin: 0 auto;
+            /* Center container if needed */
+        }
+
+        .box-container-4 img {
+            width: 292px;
+            height: auto;
+            border-radius: 25px;
+            background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+            box-shadow: 0px 0px 4px 0px rgba(239, 134, 100, 0.25);
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .box-container-4 img {
+                width: 100%;
+                /* Adjust width for mobile */
+                max-width: 428px;
+                /* Prevent the image from exceeding its original size */
+            }
+
+            .box-container-4 {
+                flex-direction: column;
+                /* Stack images vertically */
+            }
+        }
+
+        .box-container-5 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin: 0 auto;
+            /* Center container if needed */
+        }
+
+        .box-container-5 img {
+            width: auto;
+            height: 250px;
+            border-radius: 25px;
+            border: 0.5px solid rgba(63, 200, 148, 0.50);
+
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .box-container-5 img {
+                width: auto;
+                /* Adjust width for mobile */
+                max-width: 428px;
+                /* Prevent the image from exceeding its original size */
+            }
+
+            .box-container-5 {
+                flex-direction: column;
+                /* Stack images vertically */
+            }
+        }
+
+        .box-container-6 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-self: stretch;
+        }
+
+        .box-container-6 img {
+            width: 200px;
+            height: auto;
+            border-radius: 25px;
+            background: #FFF;
+            box-shadow: 0px 0px 2px 0px rgba(232, 77, 27, 0.50);
+            padding: 20px;
+
+        }
+
     </style>
 </head>
 
 <body>
     <header class="sticky-header">
-        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" alt="Logo" /> </a>
+        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" /> </a>
         <div class="menu">
             <a href="index.html">
                 <p style="color: var(--text-color-1, #898989);">Projects</p>
@@ -31,12 +147,85 @@
         </div>
     </header>
 
-    <div class="maintenance-banner">
-        🛠️ This page is currently under maintenance. Please check back later! 🛠️
+
+    <div class="page-container">
+
+
+        <div class="container">
+            <div class="content">
+                <h3><b> Visual Arts for <span style="color:#FF6F61;">Hoysk</span></b></h3>
+                <p style="text-align: justify;">
+                    <b>Project Overview</b><br><br>
+                    For the Hoysk project, I was tasked with creating a series of visual materials to promote their new
+                    educational campaign. My role involved designing posters, illustrations, brochures, and videos to
+                    enhance brand visibility and user engagement.<br><br>
+                    <b>Context</b><br><br>
+                    Hoysk is a leading online educational platform aiming to revolutionize the learning experience. The
+                    campaign’s primary goal was to increase brand awareness and attract new users to the platform.
+                </p>
+            </div>
+            <div class="image">
+                <img src="images/Hoysk Collections/Hoysk hero image.png" style="width: 400px;" alt="Hoysk Mockup">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Brochure</h4>
+
+        <div class="box-container-4">
+            <img src="images/Hoysk Collections/page-1.jpg" alt="page-1">
+            <img src="images/Hoysk Collections/page-2.jpg" alt="page-2">
+            <img src="images/Hoysk Collections/page-3.jpg" alt="page-3">
+            <img src="images/Hoysk Collections/page-4.jpg" alt="page-4">
+            <img src="images/Hoysk Collections/page-5.jpg" alt="page-5">
+            <img src="images/Hoysk Collections/page-6.jpg" alt="page-6">
+            <img src="images/Hoysk Collections/page-7.jpg" alt="page-7">
+            <img src="images/Hoysk Collections/page-8.jpg" alt="page-8">
+            <img src="images/Hoysk Collections/page-9.jpg" alt="page-9">
+            <img src="images/Hoysk Collections/page-10.jpg" alt="page-10">
+        </div>
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">illustrations</h4>
+
+        <div class="box-container-5">
+            <img src="images/Hoysk Collections/il-2.png" alt="il-2">
+            <img src="images/Hoysk Collections/il-4.jpg" alt="il-4">
+            <img src="images/Hoysk Collections/il-1.png" alt="il-1">
+            <img src="images/Hoysk Collections/il-3.png" alt="il-3">
+        </div>
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Logo Design</h4>
+
+        <div class="box-container-6">
+            <img src="images/Hoysk Collections/logo.png" alt="logo">
+        </div>
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Visit AINVOX</h4>
+        <div style="text-align: center;">
+            <p style="color: var(--text-color-2, #4A4A4A);
+          text-align: center;
+          font-weight: 400;">Website Link : <a href="https://ainvox.com/" target="_blank" style="color: var(--main-color, #FF6F61); 
+              font-weight: 700;">ainvox.com</a></p>
+        </div>
+
+
+
+
     </div>
-
-
-
     <footer>
         <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights
             reserved.</p>
