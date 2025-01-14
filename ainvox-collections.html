@@ -7,20 +7,103 @@
     <title>Jasim Ux | Creative Showcase : Ainvox</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .maintenance-banner {
-            background-color: #FF6F61;
-            color: #fff;
-            text-align: center;
-            padding: 10%;
-            font-size: 20px;
-            font-weight: bold;
+        .container {
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+            
+            flex-direction: row;
+            gap: 50px;
+            align-items: center;
         }
+
+        .content {
+            color: #4a4a4a;
+        }
+
+        .content h3 {
+            margin: 0;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .content h3 {
+                text-align: center;
+                /* Center-align the h3 tag */
+            }
+        }
+
+
+
+        .box-container-4 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            margin: 0 auto;
+            /* Center container if needed */
+        }
+
+        .box-container-4 img {
+            width: 300px;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .box-container-4 img {
+                width: 100%;
+                /* Adjust width for mobile */
+                max-width: 428px;
+                /* Prevent the image from exceeding its original size */
+            }
+
+            .box-container-4 {
+                flex-direction: column;
+                /* Stack images vertically */
+            }
+        }
+
+        .box-container-5 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            max-width: 1223px;
+            margin: 0 auto;
+        }
+
+        .box-container-5 img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        
     </style>
 </head>
 
 <body>
     <header class="sticky-header">
-        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" alt="Logo" /> </a>
+        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" /> </a>
         <div class="menu">
             <a href="index.html">
                 <p style="color: var(--text-color-1, #898989);">Projects</p>
@@ -31,12 +114,127 @@
         </div>
     </header>
 
-    <div class="maintenance-banner">
-        🛠️ This page is currently under maintenance. Please check back later! 🛠️
+
+    <div class="page-container">
+
+
+        <div class="container">
+            <div class="content">
+                <h3><b>Unleashing Creativity for <span style="color:#FF6F61;">Ainvox</span></b></h3>
+                <p style="text-align: justify;">
+                    Discover the design assets that amplified the brand’s voice and identity.
+                </p>
+            </div>
+            <div class="image">
+                <img src="images/Ainvox Collections/Ainvok Mockup.png" style="width: 800px;" alt="Ainvok Mockup">
+            </div>
+        </div>
+
+
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Professional Identity in Every Card</h4>
+
+        <div class="box-container-4">
+            <img src="images/Ainvox Collections/Business Card/card 1.png" alt="card 1">
+            <img src="images/Ainvox Collections/Business Card/card 2.png" alt="card 2">
+        </div>
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Engaging Visual Stories</h4>
+        <div class="box-container-4">
+            <video width="270" height="508" autoplay loop muted controls>
+                <source src="images/Ainvox Collections/Promotional Videos/Why Ainvox.mp4" type="video/mp4">
+            </video>
+            <video width="270" height="508" autoplay loop muted controls>
+                <source src="images/Ainvox Collections/Promotional Videos/Ainvox Features.mp4" type="video/mp4">
+            </video>
+            <video width="270" height="508" autoplay loop muted controls>
+                <source src="images/Ainvox Collections/Promotional Videos/AINVOX Across Industries.mp4"
+                    type="video/mp4">
+            </video>
+        </div>
+
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Handcrafted Visual Elements</h4>
+        <div class="box-container-5">
+            <img src="images/Ainvox Collections/Illustrations/Smart IVR for marketing automation.png"
+                alt="Illustration 1">
+            <img src="images/Ainvox Collections/Illustrations/IVR solutions for customer-engagement.png"
+                alt="Illustration 2">
+            <img src="images/Ainvox Collections/Illustrations/AI-based call automation software.png"
+                alt="Illustration 3">
+            <img src="images/Ainvox Collections/Illustrations/IVR call center solutions for businesses.png"
+                alt="Illustration 4">
+            <img src="images/Ainvox Collections/Illustrations/Affordable cloud IVR solutions.png" alt="Illustration 5">
+            <img src="images/Ainvox Collections/Illustrations/How to set up an IVR system.png" alt="Illustration 6">
+            <img src="images/Ainvox Collections/Illustrations/Best IVR System for Small-Businesses.png"
+                alt="Illustration 7">
+            <img src="images/Ainvox Collections/Illustrations/Custom IVR for customer support.png" alt="Illustration 8">
+            <img src="images/Ainvox Collections/Illustrations/Best IVR Solutions in Madhya Pradesh and Bangalore.png"
+                alt="Illustration 9">
+            <img src="images/Ainvox Collections/Illustrations/ainvoximg2 3.png" alt="Illustration 10">
+            <img src="images/Ainvox Collections/Illustrations/img-1 1.png" alt="Illustration 11">
+            <img src="images/Ainvox Collections/Illustrations/Demo booking.png" alt="Illustration 12">
+        </div>
+
+
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Iconic Brand Identity</h4>
+
+
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Eye-Catching Campaigns</h4>
+
+
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Innovative AI Creations</h4>
+
+
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Digital Presence Amplified</h4>
+
+
+
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Visit Ainvox</h4>
+        <div style="text-align: center;">
+            <p style="color: var(--text-color-2, #4A4A4A);
+      text-align: center;
+      font-weight: 400;">Website Link : <a href="https://ainvox.com/" target="_blank" style="color: var(--main-color, #FF6F61); 
+          font-weight: 700;">ainvox.com</a></p>
+        </div>
+
+
+
     </div>
-
-
-
     <footer>
         <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights
             reserved.</p>
