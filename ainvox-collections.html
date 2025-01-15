@@ -9,10 +9,10 @@
     <style>
         .container {
             display: flex;
-            
+
             justify-content: center;
             align-items: center;
-            
+
             flex-direction: row;
             gap: 50px;
             align-items: center;
@@ -69,18 +69,23 @@
 
         /* Media query for mobile devices */
         @media (max-width: 768px) {
-            .box-container-4 img {
-                width: 100%;
-                /* Adjust width for mobile */
-                max-width: 428px;
-                /* Prevent the image from exceeding its original size */
+            .box-container-4 {
+                gap: 10px;
+                /* Adjust gap for mobile */
+                flex-direction: row;
+                flex-wrap: wrap;
             }
 
-            .box-container-4 {
-                flex-direction: column;
-                /* Stack images vertically */
+            .box-container-4 img {
+                width: calc(50% - 10px);
+                /* Two images per row with gap */
+                max-width: 100%;
+                border-radius: 10px;
+                /* Adjust border radius for mobile */
             }
         }
+
+
 
         .box-container-5 {
             display: flex;
@@ -97,8 +102,118 @@
             height: auto;
         }
 
-        
-    </style>
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            .box-container-5 {
+                gap: 25px;
+            }
+
+            .box-container-5 img {
+                flex: 0 0 calc(50% - 25px);
+                /* Set two items per row with the gap */
+                max-width: calc(50% - 25px);
+            }
+        }
+
+
+        .box-container-6 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            /* Center align the container horizontally */
+            gap: 50px;
+            width: 100%;
+            /* Ensure it takes the full width for centering */
+        }
+
+        /* Mobile view adjustment */
+        @media (max-width: 768px) {
+            .box-container-6 {
+                gap: 25px;
+                /* Adjust the gap for smaller screens */
+            }
+        }
+
+        .box-container-7 {
+            display: flex;
+            /* Changed to flex */
+            align-items: center;
+            /* Centers items vertically */
+            justify-content: center;
+            /* Centers items horizontally */
+            gap: 50px;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .box-container-7 video {
+            transition: border-radius 0.3s ease;
+            /* Smooth transition for border-radius */
+        }
+
+        .box-container-7 video:hover {
+            border-radius: 0px 0px 25px 25px;
+        }
+
+        @media (max-width: 768px) {
+            .box-container-7 {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .box-container-7 video {
+                width: 100%;
+                max-width: 270px;
+                border-radius: 0px 0px 10px 10px;
+            }
+
+            .box-container-7 video:hover {
+                border-radius: 10px;
+                /* Reduced border-radius for mobile view on hover */
+            }
+        }
+
+
+
+        /* Base styles for desktop */
+        .box-container-8 {
+            display: flex;
+            max-width: 1241px;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            gap: 29px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            /* Center the container horizontally */
+        }
+
+        .box-container-8 img {
+            width: 394px;
+            height: 236px;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .box-container-8 {
+                flex-direction: row;
+                /* Display images in a row */
+                gap: 10px;
+                /* Reduce gap for mobile */
+                justify-content: center;
+                /* Center the images on the row */
+            }
+
+            .box-container-8 img {
+                width: calc(50% - 10px);
+                /* Two images per row on mobile */
+                height: auto;
+                /* Maintain aspect ratio */
+            }
+        }
+
+           </style>
 </head>
 
 <body>
@@ -146,7 +261,8 @@
         <div class="div1"></div>
 
         <h4 style="color: #333; text-align: center; font-weight: 700;">Engaging Visual Stories</h4>
-        <div class="box-container-4">
+
+        <div class="box-container-7">
             <video width="270" height="508" autoplay loop muted controls>
                 <source src="images/Ainvox Collections/Promotional Videos/Why Ainvox.mp4" type="video/mp4">
             </video>
@@ -158,7 +274,6 @@
                     type="video/mp4">
             </video>
         </div>
-
 
 
 
@@ -193,6 +308,17 @@
         <div class="div1"></div>
 
         <h4 style="color: #333; text-align: center; font-weight: 700;">Iconic Brand Identity</h4>
+        <div class="box-container-6">
+            <img src="images/Ainvox Collections/Logo Design/Ainvox logo.png" style="border-radius: 25px;
+background: #5D4EA9; display: flex;
+padding: 10px;
+align-items: center;
+gap: 10px;
+width: 98px;
+height: 98px;" alt="logo ainvox">
+            <img src="images/Ainvox Collections/Logo Design/logo.png" style="width: 153px;
+height: 35px;" alt="logo ainvox a">
+        </div>
 
 
 
@@ -201,6 +327,16 @@
         <div class="div1"></div>
 
         <h4 style="color: #333; text-align: center; font-weight: 700;">Eye-Catching Campaigns</h4>
+        <div class="box-container-5">
+            <img src="images/Ainvox Collections/Poster Design/Childrens day poster.jpg" alt="poster 1">
+            <img src="images/Ainvox Collections/Poster Design/post 2-A _Introducing AINVOX_.jpg" alt="poster 2">
+            <img src="images/Ainvox Collections/Poster Design/post 2-B _Introducing AINVOX_.jpg" alt="poster 3">
+            <img src="images/Ainvox Collections/Poster Design/post 2-C _Introducing AINVOX_.jpg" alt="poster 4">
+            <img src="images/Ainvox Collections/Poster Design/post 2-D _Introducing AINVOX_.jpg" alt="poster 5">
+            <img src="images/Ainvox Collections/Poster Design/post 2-E _Introducing AINVOX_.jpg" alt="poster 6">
+            <img src="images/Ainvox Collections/Poster Design/post 2-F _Introducing AINVOX_.jpg" alt="poster 7">
+            <img src="images/Ainvox Collections/Poster Design/post1 _Brand Introduction.jpg" alt="poster 8">
+        </div>
 
 
 
@@ -209,15 +345,19 @@
         <div class="div1"></div>
 
         <h4 style="color: #333; text-align: center; font-weight: 700;">Innovative AI Creations</h4>
-
-
-
-
-
-        <div class="div1"></div>
-
-        <h4 style="color: #333; text-align: center; font-weight: 700;">Digital Presence Amplified</h4>
-
+        <div class="box-container-8">
+            <img src="images/Ainvox Collections/AI-Generated Images/Careers.png" alt="AI-Generated Image 1">
+            <img src="images/Ainvox Collections/AI-Generated Images/Construction Industry.png"
+                alt="AI-Generated Image 2">
+            <img src="images/Ainvox Collections/AI-Generated Images/Consulting Services.png" alt="AI-Generated Image 3">
+            <img src="images/Ainvox Collections/AI-Generated Images/Education.png" alt="AI-Generated Image 4">
+            <img src="images/Ainvox Collections/AI-Generated Images/ivr img.png" alt="AI-Generated Image 5">
+            <img src="images/Ainvox Collections/AI-Generated Images/Logistics.png" alt="AI-Generated Image 6">
+            <img src="images/Ainvox Collections/AI-Generated Images/Automated Calls, Survey & Feedback.png"
+                alt="AI-Generated Image 7">
+            <img src="images/Ainvox Collections/AI-Generated Images/Automobile.png" alt="AI-Generated Image 8">
+            <img src="images/Ainvox Collections/AI-Generated Images/Consumer Goods.png" alt="AI-Generated Image 9">
+        </div>
 
 
 
