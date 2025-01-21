@@ -7,20 +7,248 @@
     <title>Jasim Ux | Hotel Booking App</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .maintenance-banner {
-            background-color: #FF6F61;
-            color: #fff;
-            text-align: center;
-            padding: 10%;
-            font-size: 20px;
-            font-weight: bold;
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 50px;
+            align-items: center;
         }
+
+        .content {
+            color: #4a4a4a;
+        }
+
+        .content h3 {
+            margin: 0;
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .content h3 {
+                text-align: center;
+                /* Center-align the h3 tag */
+            }
+        }
+
+
+
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 935px;
+            /* Default width for larger screens */
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            /* Default gap */
+            margin: 0 auto;
+            /* Center container horizontally */
+        }
+
+        .box {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            border-radius: 30px;
+            background: var(--lite-color, #FF9B91);
+            box-shadow: 0px 0px 30px 0px rgba(255, 155, 145, 0.50);
+            width: calc((100% - 75px) / 3);
+            /* Three boxes per row with gap */
+            box-sizing: border-box;
+            /* Ensure padding is included in width */
+        }
+
+        h6 {
+            color: #333;
+            text-align: center;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            /* Remove default list styles */
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        li {
+            color: #4A4A4A;
+        }
+
+
+        /* Tablet View */
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .box-container {
+                width: 100%;
+                /* Adjust container width for tablets */
+                gap: 15px;
+                /* Slightly reduce gap */
+            }
+
+            .box {
+                width: calc((100% - 45px) / 2);
+                /* Two boxes per row with gap */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .box-container {
+                width: 100%;
+                gap: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
+                /* Ensures all boxes are stretched to same height */
+            }
+
+            .box {
+                width: calc((100% - 20px) / 2);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* Ensures equal height */
+            }
+        }
+
+
+        .box-container-3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            /* Ensures all boxes stretch to the same height */
+            gap: 25px;
+        }
+
+        .box-3 {
+            display: flex;
+            flex-direction: column;
+            /* Ensures content aligns properly inside each box */
+            padding: 15px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            border: 1px solid var(--main-color, #FF6F61);
+            box-shadow: 0px 0px 50px 0px rgba(255, 110, 97, 0.10);
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+        }
+
+
+        /* For smaller screens */
+        @media (max-width: 768px) {
+            .box-3 {
+                width: 100%;
+                /* Each box takes up full width on smaller screens */
+            }
+        }
+
+
+        /* Box Container Style */
+        .box-container-4 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 25px;
+        }
+
+        /* Box Style */
+        .box-4 {
+            flex: 1 1 calc(33.333% - 25px);
+            /* 3 boxes per row on large screens */
+            max-width: calc(33.333% - 25px);
+            padding: 15px;
+            border-radius: 30px;
+            box-shadow: 0px 0px 10px 0px rgba(255, 111, 97, 0.50);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Text Style inside Box */
+        .box-4 p {
+            color: var(--text-color-2, #4A4A4A);
+            text-align: center;
+        }
+
+        /* Responsive Design for Mobile View */
+        @media (max-width: 768px) {
+            .box-4 {
+                flex: 1 1 100%;
+                /* 1 box per row on small screens */
+                max-width: 100%;
+            }
+        }
+
+
+
+        .box-container-5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 701px;
+    margin: auto;
+}
+
+.box-container-5 img {
+    width: 200px;
+    height: 445px;
+    flex-shrink: 0;
+    border-radius: 25px;
+   
+    box-shadow: 0px 0px 2px 0px rgba(77, 159, 235, 0.25);
+}
+
+/* Tablet and desktop view (3 images per row) */
+@media (min-width: 768px) {
+    .box-container-5 {
+        max-width: 700px; /* Limit container width */
+    }
+}
+
+/* Mobile view (2 images per row) */
+@media (max-width: 767px) {
+    .box-container-5 {
+        gap: 15px; /* Reduce gap for smaller screens */
+    }
+    .box-container-5 img {
+        width: 45%; /* Two images per row */
+        height: auto;
+    }
+}
+
+        
     </style>
 </head>
 
 <body>
     <header class="sticky-header">
-        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" alt="Logo" /> </a>
+        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" /> </a>
         <div class="menu">
             <a href="index.html">
                 <p style="color: var(--text-color-1, #898989);">Projects</p>
@@ -31,12 +259,129 @@
         </div>
     </header>
 
-    <div class="maintenance-banner">
-        🛠️ This page is currently under maintenance. Please check back later! 🛠️
+
+    <div class="page-container">
+
+
+        <div class="container">
+            <div class="content">
+                <h3><b><span style="color:#FF6F61;">Hotel</span> Booking System</b></h3>
+                <p style="text-align: justify;">
+                    <b>Role:</b> UX/UI Designer<br><br>
+                    The Hotel Booking System is a user-centric platform designed to provide a seamless hotel booking
+                    experience. The project showcases my ability to design intuitive and engaging interfaces for a
+                    modern booking platform, emphasizing usability, security, and personalization.
+            </div>
+            <div class="image">
+                <img src="images/Hotel booking system/Hotel booking system mokup.png" alt="Hotel booking system mokup"
+                    style="width: 500PX; height: auto;">
+            </div>
+        </div>
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Key Features Designed</h4>
+
+        <div class="box-container">
+            <div class="box">
+                <h6>User Research</h6>
+                <ui>
+                    <li>Centralized view of bookings, recommended hotels, and personalized deals.
+                    </li>
+                    <li>Easy navigation with quick access to essential features.</li>
+                </ui>
+            </div>
+            <div class="box">
+                <h6>Login and Sign-Up</h6>
+                <ui>
+                    <li>User-friendly login and sign-up process.
+                    </li>
+                    <li>Secure authentication methods for better user trust.</li>
+                </ui>
+            </div>
+            <div class="box">
+                <h6>Face Authentication</h6>
+                <ui>
+                    <li>Innovative security feature allowing users to log in securely using face recognition.</li>
+                </ui>
+            </div>
+            <div class="box">
+                <h6>Profile Management</h6>
+                <ui>
+                    <li>A comprehensive user profile section for managing personal information, preferences, and booking
+                        history.</li>
+                </ui>
+            </div>
+            <div class="box">
+                <h6>Rewards Page</h6>
+                <ui>
+                    <li>Dedicated page showcasing loyalty points and redeemable rewards, enhancing user engagement and
+                        retention.</li>
+                </ui>
+            </div>
+        </div>
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Challenges & Solutions</h4>
+
+        <div class="box-container-3">
+            <div class="box-3">
+                <ul style="color: var(--text-color-2, #4A4A4A);">
+                    <li><b>Challenge:</b> Ensuring seamless navigation across multiple pages for diverse user needs</li>
+                    <BR>
+                    <li><b>Solution:</b> Designed a clean and intuitive layout with consistent visual hierarchy.</li>
+                </ul>
+            </div>
+            <div class="box-3">
+                <ul style="color: var(--text-color-2, #4A4A4A);">
+                    <li><b>Challenge:</b> Implementing face authentication with a focus on user security.
+                    </li><br>
+                    <li><b>Solution:</b>Created a straightforward, visually appealing flow for the feature, ensuring
+                        clarity at every step.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Outcomes</h4>
+
+        <div class="box-container-4">
+            <div class="box-4">
+                <p>The Hotel Booking System design highlights the importance of combining usability with innovative
+                    features like face authentication and rewards management. This design can be implemented as a fully
+                    functional system to enhance user experience in the hospitality sector.</p>
+            </div>
+        </div>
+
+        <div class="div1"></div>
+
+        <h4 style="color: #333; text-align: center; font-weight: 700;">Gallery</h4>
+        <div class="box-container-5">
+            <img src="images/Hotel booking system/start.png"
+            alt="start">
+            <img src="images/Hotel booking system/login.png"
+            alt="login">
+            <img src="images/Hotel booking system/signup.png"
+            alt="signup">
+            <img src="images/Hotel booking system/Home.png"
+            alt="Home">
+            <img src="images/Hotel booking system/details.png"
+            alt="details">
+            <img src="images/Hotel booking system/Profile.png"
+            alt="Profile">
+            <img src="images/Hotel booking system/Reward.png"
+            alt="start">
+            <img src="images/Hotel booking system/Face Authentication.png"
+            alt="start">
+            <img src="images/Hotel booking system/Face Authentication-1.png"
+            alt="start">
+        </div>
+
     </div>
-
-
-
     <footer>
         <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights
             reserved.</p>
