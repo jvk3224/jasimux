@@ -17,3 +17,11 @@ backToTopBtn.onclick = () => {
         behavior: "smooth" // Smooth scrolling
     });
 };
+
+
+
+
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
