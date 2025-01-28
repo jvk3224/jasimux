@@ -19,10 +19,11 @@ backToTopBtn.onclick = () => {
 };
 
 
-
 const menuToggle = document.querySelector('.menu-toggle');
-    const menuItems = document.querySelector('.menu-items');
+const menuItems = document.querySelector('.menu-items');
+const menuIcon = document.querySelector('.menu-icon');
 
-    menuToggle.addEventListener('click', () => {
-        menuItems.classList.toggle('show');
-    });
+menuToggle.addEventListener('click', () => {
+    menuItems.classList.toggle('show');
+    menuIcon.classList.toggle('close');  // Toggle 'close' class on the menu icon
+});
