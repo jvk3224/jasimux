@@ -20,8 +20,9 @@ backToTopBtn.onclick = () => {
 
 
 
+const menuToggle = document.querySelector('.menu-toggle');
+    const menuItems = document.querySelector('.menu-items');
 
-function toggleMenu() {
-    const menu = document.querySelector('.menu');
-    menu.classList.toggle('active');
-}
+    menuToggle.addEventListener('click', () => {
+        menuItems.classList.toggle('show');
+    });
