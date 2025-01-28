@@ -41,18 +41,19 @@
 
 <body>
     <header class="sticky-header">
-        <a href="index.html"> <img style="width: 77px;height: 70px;" src="images/logo-header.png" /> </a>
-        <div class="menu">
-            <a href="index.html">
-                <p style="color:#898989">Projects</p>
-            </a>
-            <a href="about-me.html">
-                <p style="color:#898989">About</p>
-            </a>
-            <a href="Collections.html">
-                <p style="color:#333;">Collections</p>
-            </a>
-        </div>
+        <a href="index.html" class="logo">
+            <img src="images/logo-header.png" alt="Logo" class="logo-img" />
+        </a>
+        <nav class="menu">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="menu-icon"></span>
+            </button>
+            <div class="menu-items">
+                <a href="index.html" class="menu-item">Projects</a>
+                <a href="about-me.html" class="menu-item">About</a>
+                <a href="Collections.html" class="menu-item active">Collections</a>
+            </div>
+        </nav>
     </header>
 
 
@@ -92,6 +93,17 @@
         <p style="color: #898989; text-align: center; font-size: 10px;">&copy; 2024 Mohammed Jasim Vk. All rights
             reserved.</p>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+ const menuItems = document.querySelector('.menu-items');
+ const menuIcon = document.querySelector('.menu-icon');
+ 
+ menuToggle.addEventListener('click', () => {
+     menuItems.classList.toggle('show');
+     menuIcon.classList.toggle('close');  // Toggle 'close' class on the menu icon
+ });          
+     </script>
 </body>
 
 </html>
