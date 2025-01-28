@@ -10,23 +10,20 @@
 
 <body>
     <header class="sticky-header">
-        <a href="index.html">
-            <img style="width: 77px; height: 70px;" src="images/logo-header.png" alt="Logo" />
+        <a href="index.html" class="logo">
+            <img src="images/logo-header.png" alt="Logo" class="logo-img" />
         </a>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <div class="menu">
-            <a href="index.html">
-                <p>Projects</p>
-            </a>
-            <a href="about-me.html">
-                <p>About</p>
-            </a>
-            <a href="Collections.html">
-                <p>Collections</p>
-            </a>
-        </div>
+        <nav class="menu">
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="menu-icon"></span>
+            </button>
+            <div class="menu-items">
+                <a href="index.html" class="menu-item active">Projects</a>
+                <a href="about-me.html" class="menu-item">About</a>
+                <a href="Collections.html" class="menu-item">Collections</a>
+            </div>
+        </nav>
     </header>
-    
 
     <div class="hero-section">
         <div class="hero-content">
