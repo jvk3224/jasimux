@@ -127,22 +127,21 @@ p {
 
 .menu-toggle {
     display: none;
-    background: none;
-    /* No background */
+    background: white !important; /* Force white background */
     border: none;
     cursor: pointer;
     padding: 10px;
     outline: none;
 }
 
-/* Ensure no background on hover, focus, or active states */
-.menu-toggle:hover,
+/* Ensure background stays white when clicking */
 .menu-toggle:focus,
 .menu-toggle:active {
-    background: none !important;
+    background: white !important; /* Ensure white background on click */
     outline: none !important;
     box-shadow: none !important;
 }
+
 
 .menu-icon {
     width: 24px;
