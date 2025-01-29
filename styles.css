@@ -127,9 +127,20 @@ p {
 
 .menu-toggle {
     display: none;
-    background: none;
+    background: none; /* No background */
     border: none;
     cursor: pointer;
+    padding: 10px;
+    outline: none;
+}
+
+/* Ensure no background on hover, focus, or active states */
+.menu-toggle:hover,
+.menu-toggle:focus,
+.menu-toggle:active {
+    background: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .menu-icon {
