@@ -127,7 +127,8 @@ p {
 
 .menu-toggle {
     display: none;
-    background: none; /* No background */
+    background: none;
+    /* No background */
     border: none;
     cursor: pointer;
     padding: 10px;
