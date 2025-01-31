@@ -1,83 +1,49 @@
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+/* Global Styles */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    /* Remove default margin */
 }
 
-h1 {
-    font-size: 61px;
-    color: #333333;
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
 }
 
-h2 {
-    font-size: 49px;
-    color: #333333;
-}
-
-h3 {
-    font-size: 39px;
-    color: #333333;
-}
-
-h4 {
-    font-size: 31px;
-}
-
-h5 {
-    font-size: 25px;
-}
-
-h6 {
-    font-size: 20px;
-}
+h1 { font-size: 61px; }
+h2 { font-size: 49px; }
+h3 { font-size: 39px; }
+h4 { font-size: 31px; }
+h5 { font-size: 25px; }
+h6 { font-size: 20px; }
 
 p {
     font-size: 16px;
     color: #4A4A4A;
 }
 
-
+/* Responsive Typography */
 @media (max-width: 768px) {
-
-    /* Adjust the max-width as needed for mobile screens */
-    h1 {
-        font-size: 49px;
-    }
-
-    h2 {
-        font-size: 39px;
-    }
-
-    h3 {
-        font-size: 31px;
-    }
-
-    h4 {
-        font-size: 25px;
-    }
-
-    h5 {
-        font-size: 20px;
-    }
-
-    h6 {
-        font-size: 16px;
-    }
-
-    p {
-        font-size: 13px;
-    }
+    h1 { font-size: 49px; }
+    h2 { font-size: 39px; }
+    h3 { font-size: 31px; }
+    h4 { font-size: 25px; }
+    h5 { font-size: 20px; }
+    h6 { font-size: 16px; }
+    p { font-size: 13px; }
 }
 
+/* Remove Tap Highlight */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 
-
-
+/* Sticky Header */
 .sticky-header {
     position: sticky;
     top: 0;
-    background-color: #fff;
+    background: #fff;
     box-shadow: 0px 2px 2px rgba(51, 51, 51, 0.03);
     display: flex;
     justify-content: space-between;
@@ -99,9 +65,11 @@ p {
     height: 70px;
 }
 
+/* Navigation Menu */
 .menu {
     display: flex;
     align-items: center;
+    gap: 25px;
 }
 
 .menu-items {
@@ -117,29 +85,18 @@ p {
     transition: color 0.3s;
 }
 
-.menu-item:hover {
+.menu-item:hover, .menu-item.active {
     color: #333;
 }
 
-.menu-item.active {
-    color: #333;
-}
-
+/* Mobile Menu */
 .menu-toggle {
     display: none;
-    background: white !important; /* Force white background */
+    background: white !important;
     border: none;
     cursor: pointer;
     padding: 10px;
     outline: none;
-}
-
-/* Ensure background stays white when clicking */
-.menu-toggle:focus,
-.menu-toggle:active {
-    background: white !important; /* Ensure white background on click */
-    outline: none !important;
-    box-shadow: none !important;
 }
 
 .menu-icon {
@@ -160,32 +117,18 @@ p {
     transition: transform 0.3s;
 }
 
-.menu-icon::before {
-    transform: translateY(-8px);
-}
+.menu-icon::before { transform: translateY(-8px); }
+.menu-icon::after { transform: translateY(8px); }
 
-.menu-icon::after {
-    transform: translateY(8px);
-}
-
-/* Close icon styles */
-.menu-icon.close::before {
-    transform: rotate(45deg);
-}
-
-.menu-icon.close::after {
-    transform: rotate(-45deg);
-}
-
-.menu-icon.close {
-    background-color: transparent;
-}
+.menu-icon.close::before { transform: rotate(45deg); }
+.menu-icon.close::after { transform: rotate(-45deg); }
+.menu-icon.close { background-color: transparent; }
 
 @media (max-width: 768px) {
     .menu-items {
         display: none;
         flex-direction: column;
-        background-color: #fff;
+        background: #fff;
         position: absolute;
         top: 100%;
         right: 0;
@@ -197,90 +140,58 @@ p {
         text-align: center;
     }
 
-    .menu-items.show {
-        display: flex;
-    }
-
-    .menu-item {
-        padding: 10px;
-        border-bottom: 1px solid #f0f0f0;
-        width: 100%;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .logo-img {
-        width: auto;
-        height: 50px;
-    }
+    .menu-items.show { display: flex; }
+    .menu-item { padding: 10px; border-bottom: 1px solid #f0f0f0; width: 100%; }
+    .menu-toggle { display: block; }
+    .logo-img { height: 50px; }
 }
 
-
-
-
-
-
-
-
+/* Page Container */
 .page-container {
     margin: 100px auto;
     padding: 0% 4%;
 }
 
 @media (max-width: 768px) {
-    .page-container {
-        margin: 50px auto;
-        /* Force this rule to override others */
-    }
+    .page-container { margin: 50px auto; }
 }
 
-
-
-.menu {
-    display: flex;
-    gap: 25px;
-}
-
-a {
-    text-decoration: none;
-}
-
+/* Hero Section */
 .hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px 0;
 }
 
+/* Button */
 button {
     padding: 16px 32px;
     color: #FF6f61;
-    background-color: #fff;
-    border: 2px solid var(--main-color, #FF6F61);
+    background: #fff;
+    border: 2px solid #FF6F61;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
     color: #F0F0F0;
-    background-color: #FF6f61;
+    background: #FF6f61;
 }
 
+/* Responsive Container */
 .responsive-container {
     display: flex;
     flex-wrap: wrap;
-    background-color: #fff;
+    background: #fff;
     padding: 100px;
     margin-bottom: 100px;
     transition: background-color 0.3s ease;
 }
 
 .responsive-container:hover {
-    background-color: #FF6F61;
+    background: #FF6F61;
 }
 
 .section {
@@ -299,122 +210,59 @@ button:hover {
     justify-content: center;
 }
 
-.text-section h5 {
-    color: #333;
-    margin-bottom: 5px;
-    transition: color 0.3s ease;
-    font-weight: 500;
-    /* Smooth transition */
-}
-
-.text-section p {
-    color: #4A4A4A;
-    margin: 5px 0;
-    transition: color 0.3s ease;
-    /* Smooth transition */
-}
-
+.text-section h5,
+.text-section p,
 .text-section span {
-    color: #FF6F61;
-    margin: 5px 0;
     transition: color 0.3s ease;
-    /* Smooth transition */
 }
 
+.text-section h5 { color: #333; font-weight: 500; }
+.text-section p { color: #4A4A4A; }
+.text-section span { color: #FF6F61; }
 
-
-/* Change text color on hover */
-.responsive-container:hover .text-section h5 {
-    color: #F0F0F0;
-    /* New color for the header */
-}
-
-.responsive-container:hover .text-section p {
-    color: #F0F0F0;
-    /* New color for the paragraph */
-}
-
+.responsive-container:hover .text-section h5,
+.responsive-container:hover .text-section p,
 .responsive-container:hover .text-section span {
     color: #F0F0F0;
-    /* New color for the paragraph */
-}
-
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .responsive-container {
-        padding: 25px;
-        margin-bottom: 25px;
-        flex-direction: column;
-        /* Stack sections vertically */
-    }
-
-    .section {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-
-    .image-section {
-        order: 1;
-        /* Ensure image-section comes first */
-    }
-
-    .text-section {
-        order: 2;
-        /* Ensure text-section comes second */
-    }
-}
-
-.div1 {
-    padding-bottom: 80px;
-}
-
-.div2 {
-    padding-bottom: 40px;
-}
-
-.div3 {
-    padding-bottom: 20px;
 }
 
 @media (max-width: 768px) {
-    .div1 {
-        padding-bottom: 40px;
-    }
-
-    .div2 {
-        padding-bottom: 20px;
-    }
-
-    .div3 {
-        padding-bottom: 10px;
-    }
+    .responsive-container { padding: 25px; margin-bottom: 25px; flex-direction: column; }
+    .section { text-align: center; }
 }
 
+/* Spacing Utilities */
+.div1 { padding-bottom: 80px; }
+.div2 { padding-bottom: 40px; }
+.div3 { padding-bottom: 20px; }
 
+@media (max-width: 768px) {
+    .div1 { padding-bottom: 40px; }
+    .div2 { padding-bottom: 20px; }
+    .div3 { padding-bottom: 10px; }
+}
 
-
+/* Back to Top Button */
 #backToTopBtn {
     display: none;
-    /* Hidden by default */
     position: fixed;
     bottom: 25px;
     right: 25px;
     z-index: 99;
     font-size: 18px;
-    background-color: #FF9B91;
+    background: #FF9B91;
     color: #F0F0F0;
     border: none;
-    outline: none;
     cursor: pointer;
     padding: 15px 20px;
     border-radius: 100px;
     filter: drop-shadow(0px 0px 8px rgba(51, 51, 51, 0.25));
-    transition: background-color 0.3s;
+    transition: background 0.3s;
 }
 
-#backToTopBtn:hover {
-    background-color: #FF6F61;
+#backToTopBtn:hover { background: #FF6F61; }
+
+/* Link Styles */
+a {
+  text-decoration: none;
 }
