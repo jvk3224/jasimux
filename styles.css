@@ -1,11 +1,21 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Global Styles */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
 
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    /* Remove default margin */
 }
 
+a {
+    text-decoration: none;
+}
+
+/* Heading Styles */
 h1 {
     font-size: 61px;
     color: #333333;
@@ -38,10 +48,8 @@ p {
     color: #4A4A4A;
 }
 
-
+/* Responsive Heading Styles */
 @media (max-width: 768px) {
-
-    /* Adjust the max-width as needed for mobile screens */
     h1 {
         font-size: 49px;
     }
@@ -71,13 +79,154 @@ p {
     }
 }
 
-
-* {
-    -webkit-tap-highlight-color: transparent;
+/* Page Container */
+.page-container {
+    margin: 100px auto;
+    padding: 0% 4%;
 }
 
+@media (max-width: 768px) {
+    .page-container {
+        margin: 50px auto;
+    }
+}
 
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 
+/* Buttons */
+button {
+    padding: 16px 32px;
+    color: #FF6f61;
+    background-color: #fff;
+    border: 2px solid var(--main-color, #FF6F61);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    color: #F0F0F0;
+    background-color: #FF6f61;
+}
+
+/* Responsive Container */
+.responsive-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 100px;
+    margin-bottom: 100px;
+    transition: background-color 0.3s ease;
+}
+
+.responsive-container:hover {
+    background-color: #FF6F61;
+}
+
+.section {
+    flex: 1;
+    margin: 10px;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-section h5 {
+    color: #333;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.text-section p {
+    color: #4A4A4A;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.text-section span {
+    color: #FF6F61;
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.responsive-container:hover .text-section h5 {
+    color: #F0F0F0;
+}
+
+.responsive-container:hover .text-section p {
+    color: #F0F0F0;
+}
+
+.responsive-container:hover .text-section span {
+    color: #F0F0F0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .responsive-container {
+        padding: 25px;
+        margin-bottom: 25px;
+        flex-direction: column;
+    }
+
+    .section {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .image-section {
+        order: 1;
+    }
+
+    .text-section {
+        order: 2;
+    }
+}
+
+/* Spacing */
+.div1 {
+    padding-bottom: 80px;
+}
+
+.div2 {
+    padding-bottom: 40px;
+}
+
+.div3 {
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .div1 {
+        padding-bottom: 40px;
+    }
+
+    .div2 {
+        padding-bottom: 20px;
+    }
+
+    .div3 {
+        padding-bottom: 10px;
+    }
+}
+
+/* Sticky Header */
 .sticky-header {
     position: sticky;
     top: 0;
@@ -132,18 +281,15 @@ p {
 .menu-toggle {
     display: none;
     background: white !important;
-    /* Force white background */
     border: none;
     cursor: pointer;
     padding: 10px;
     outline: none;
 }
 
-/* Ensure background stays white when clicking */
 .menu-toggle:focus,
 .menu-toggle:active {
     background: white !important;
-    /* Ensure white background on click */
     outline: none !important;
     box-shadow: none !important;
 }
@@ -174,7 +320,6 @@ p {
     transform: translateY(8px);
 }
 
-/* Close icon styles */
 .menu-icon.close::before {
     transform: rotate(45deg);
 }
@@ -187,6 +332,7 @@ p {
     background-color: transparent;
 }
 
+/* Mobile Menu Styles */
 @media (max-width: 768px) {
     .menu-items {
         display: none;
@@ -223,188 +369,9 @@ p {
     }
 }
 
-
-
-
-
-
-
-
-.page-container {
-    margin: 100px auto;
-    padding: 0% 4%;
-}
-
-@media (max-width: 768px) {
-    .page-container {
-        margin: 50px auto;
-        /* Force this rule to override others */
-    }
-}
-
-
-
-.menu {
-    display: flex;
-    gap: 25px;
-}
-
-a {
-    text-decoration: none;
-}
-
-.hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-button {
-    padding: 16px 32px;
-    color: #FF6f61;
-    background-color: #fff;
-    border: 2px solid var(--main-color, #FF6F61);
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    color: #F0F0F0;
-    background-color: #FF6f61;
-}
-
-.responsive-container {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #fff;
-    padding: 100px;
-    margin-bottom: 100px;
-    transition: background-color 0.3s ease;
-}
-
-.responsive-container:hover {
-    background-color: #FF6F61;
-}
-
-.section {
-    flex: 1;
-    margin: 10px;
-}
-
-.image-section img {
-    max-width: 100%;
-    height: auto;
-}
-
-.text-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.text-section h5 {
-    color: #333;
-    margin-bottom: 5px;
-    transition: color 0.3s ease;
-    font-weight: 500;
-    /* Smooth transition */
-}
-
-.text-section p {
-    color: #4A4A4A;
-    margin: 5px 0;
-    transition: color 0.3s ease;
-    /* Smooth transition */
-}
-
-.text-section span {
-    color: #FF6F61;
-    margin: 5px 0;
-    transition: color 0.3s ease;
-    /* Smooth transition */
-}
-
-
-
-/* Change text color on hover */
-.responsive-container:hover .text-section h5 {
-    color: #F0F0F0;
-    /* New color for the header */
-}
-
-.responsive-container:hover .text-section p {
-    color: #F0F0F0;
-    /* New color for the paragraph */
-}
-
-.responsive-container:hover .text-section span {
-    color: #F0F0F0;
-    /* New color for the paragraph */
-}
-
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .responsive-container {
-        padding: 25px;
-        margin-bottom: 25px;
-        flex-direction: column;
-        /* Stack sections vertically */
-    }
-
-    .section {
-        flex: 1 1 100%;
-        text-align: center;
-    }
-
-    .image-section {
-        order: 1;
-        /* Ensure image-section comes first */
-    }
-
-    .text-section {
-        order: 2;
-        /* Ensure text-section comes second */
-    }
-}
-
-.div1 {
-    padding-bottom: 80px;
-}
-
-.div2 {
-    padding-bottom: 40px;
-}
-
-.div3 {
-    padding-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-    .div1 {
-        padding-bottom: 40px;
-    }
-
-    .div2 {
-        padding-bottom: 20px;
-    }
-
-    .div3 {
-        padding-bottom: 10px;
-    }
-}
-
-
-
-
+/* Back to Top Button */
 #backToTopBtn {
     display: none;
-    /* Hidden by default */
     position: fixed;
     bottom: 25px;
     right: 25px;
