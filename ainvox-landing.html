@@ -45,22 +45,20 @@
             }
         }
 
-
-        /* Container styles */
+        /* Key Features Section */
         .box-container-2 {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: stretch;
             gap: 25px;
+            /* Default larger gap for desktop */
             padding: 20px;
         }
 
-        /* Box styles */
         .box-2 {
-            display: inline-flex;
+            display: flex;
             padding: 10px;
-            /* Reduced padding */
             flex-direction: column;
             justify-content: center;
             align-items: center;
@@ -68,35 +66,40 @@
             background: var(--main-color, #FF6F61);
             box-shadow: 0px 0px 30px 0px rgba(255, 111, 97, 0.75);
             max-width: 300px;
-            /* Optional: To control box width */
             width: 100%;
             text-align: center;
         }
 
-        .box-2 h6 {
-            color: var(--off-white, #F0F0F0);
-            font-weight: 500;
-            line-height: 1.2;
-            /* Adjust line height */
-            margin: 5px 0;
-            /* Reduced margin */
-        }
-
-
+        .box-2 h6,
         .box-2 p {
             color: var(--off-white, #F0F0F0);
             margin: 5px 0;
-            /* Reduced margin */
             line-height: 1.2;
-            /* Adjust line height */
         }
 
-
-        /* Responsive styles */
+        /* Mobile View: Ensuring 2 boxes per row with equal spacing */
         @media (max-width: 768px) {
+            .box-container-2 {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                /* Two equal-width columns */
+                gap: 10px;
+                /* Adds gap between both rows and columns */
+                padding: 10px;
+                /* Adjusted padding for mobile */
+            }
+
             .box-2 {
-                max-width: 100%;
-                /* Full width for mobile */
+                width: 100%;
+                /* Ensures full width inside the grid */
+            }
+        }
+
+        /* Extra Small Screens: 1 box per row */
+        @media (max-width: 480px) {
+            .box-container-2 {
+                grid-template-columns: 1fr;
+                /* Single column */
             }
         }
 
